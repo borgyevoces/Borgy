@@ -1,0 +1,37 @@
+{% extends 'pages/index.html'%}
+
+{% block content %}
+{% load static %}
+
+<section id="aboutus">
+    <div class="about-us">
+        <div class="container">
+            <div class="content-section">
+                    <div class="title">
+                    <p>About Us</p>
+                    <h1>Know More About Us</h1>
+                    </div>
+                <div class="content">
+                    <h3>We are Bolt Fitness Gym</h3>
+                    <p>  At our Gym, we are committed to helping you achieve your fitness goals and lead a healthier lifestyle.
+                        Our state-of-the-art facilities, experienced trainers, and diverse range of classes make us the perfect
+                        place for individuals of all fitness levels.</p>
+                    <p>Whether you're a seasoned athlete or just starting your fitness journey, we have the tools and
+                        support you need. Our mission is to create a positive and motivating environment where everyone
+                        feels welcome and empowered to reach their full potential.</p>
+                        <p>
+                            Join us on this fitness journey, and let's work together to build a stronger, healthier you.
+                        </p>
+                    <div class="button">
+                        
+                    </div>
+                </div>
+               
+            </div>
+            <div class="image-section">
+                <img src="{% static 'images/banner.jpg' %}" alt="Your Image Description">
+            </div>
+        </div>
+    </div>
+    </section>
+{% endblock %}

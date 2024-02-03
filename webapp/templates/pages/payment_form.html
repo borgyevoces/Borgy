@@ -1,0 +1,14 @@
+{% extends 'pages/index.html'%}
+
+{% block content %}
+{% load static %}
+
+<div class="login-container">
+<h2>Membership Process</h2>
+<form class="form-group" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Process Payment</button>
+</form>
+</div>
+{%endblock%}

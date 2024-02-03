@@ -1,0 +1,9 @@
+<h2>User Profiles</h2>
+<ul>
+    {% for profile in profiles %}
+        <li>
+            {{ profile.username }}
+            <a href="{% url 'delete_profile' pk=profile.pk %}">Delete</a>
+        </li>
+    {% endfor %}
+</ul>

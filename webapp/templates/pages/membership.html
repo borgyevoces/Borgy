@@ -1,0 +1,74 @@
+{% extends 'pages/index.html'%}
+
+{% block content %}
+{% load static %}
+<section id="pricing">
+               
+    <div class="content">
+     
+      <h1 class="underline">Plans & Pricing</h1>
+      <div class="pricecard-container">
+        <div class="pricecard">
+            <p class="title">Non-Member</p>
+            <div class="pricecontainer">
+              <p class="price">₱150</p>
+              <p class="pricedescriptor">/session</p>
+            </div>
+            <p class="includes">This Plan Includes:</p>
+            <ul class="benefitlist">
+              <li>Limited access to gym facilities during operating hours</li>
+              <li>Use of cardio equipment, strength training machines, weights</li>
+            </ul>
+        
+           </div>
+           
+      <div class="pricecard">
+        <p class="title">Basic Plan</p>
+        <div class="pricecontainer">
+          <p class="price">₱1,400</p>
+          <p class="pricedescriptor">/month</p>
+        </div>
+        <p class="includes">This Plan Includes:</p>
+        <ul class="benefitlist">
+          <li>Unlimited access to gym facilities during operating hours</li>
+          <li>Use of cardio equipment, strength training machines, and free weights</li>
+          <li>Access to group fitness classes</li>
+          <li>Locker room and shower facilities</li>
+          <li>Personalized fitness assessment and program orientation</li>
+          <li>Fitness tracking and progress monitoring</li>
+        </ul>
+        <div class="price-button">
+        </div>
+          
+      </div>
+
+      <div class="pricecard">
+        <p class="title">Premiums Plan</p>
+        <div class="pricecontainer">
+          <p class="price">₱3,000</p>
+          <p class="pricedescriptor">/month</p>
+        </div>
+        <p class="includes">This Plan Includes:</p>
+        <ul class="benefitlist">
+            
+          <li>Extended gym access, including weekends and holidays</li>
+          <li>Additional amenities such as saunas and relaxation areas</li>
+          <li>Personal Trainer</li>
+          <li>Discounts on personal training sessions and merchandise</li>
+          <li>Exclusive access to specialized fitness workshops and events</li>
+        </ul>
+        <div class="price-button">
+        
+        </div>
+       
+      </div>
+
+    
+  </div>
+  <div class="price-button">
+   <a style="margin-top:50px margin-bottom:50px; width: 100px;" href="{% url 'payment_form' %}"><button>Become a Member</button></a>
+  </div>
+  
+</div>
+  </section>
+  {%endblock%}

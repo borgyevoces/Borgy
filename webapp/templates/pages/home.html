@@ -1,0 +1,174 @@
+{% extends 'pages/index.html'%}
+
+{% block content %}
+{% load static %}
+
+<section id="banner">
+    <div class="banner-text">
+        <h1>Bolt Fitness</h1>
+        <p>Transform Your Limits, Elevate Your Strength!</p>
+        
+        
+
+        {%if user.is_authenticated%}
+        <p> Welcome {{ user.first_name }} {{ user.last_name }}</p>
+        <div class="banner-button">
+          <a href="{% url 'membershipPage' %}"><span></span>Become a Member</a>
+       </div>
+       {%else%}
+      <div class="banner-button">
+        <a href="{% url 'login' %}"><span></span>Login</a>
+     </div>
+     {%endif%}
+       
+    </div>
+</section>
+
+  <section style="background: white; padding:50px,0px, 50px;">  
+    <h1 class= "hustle" style="text-align: center; color: teal; margin-bottom: 40px; font-weight: bold;"> Why Bolt Fitness?</h1>
+    <div class="oldcard-container">
+      
+        <div class="card">
+            <div class="image-container">
+            <img src={% static 'images/variety.jpg' %} alt="Image description">
+            </div>
+          <h3 class="card-title">Variety of Classes</h3>
+          <p class="card-description">We offer a diverse range of fitness classes designed to cater to different interests and fitness levels.</p>
+        </div>
+        
+        <div class="olodcard-container">
+            <div class="card">
+                <div class="image-container">
+                    <img src={% static 'images/dumbbell.png' %} alt="Image description">
+                    </div>
+              <h3 class="card-title">Cutting-Edge Equipment</h3>
+              <p>We provide state-of-the-art equipment and training tools that enable you to push yourself to new heights.</p>
+              </div>
+              </div>
+              <div class="oldcard-container">
+                <div class = "card">
+                    <div class="image-container">
+                        <img src={% static 'images/handshake.png' %} alt="Image description">
+                        </div>
+                    <h3 class="card-title"> Motivating Environment</h3>
+                    <p>We've created a dynamic and vibrant atmosphere where the hustle is embraced.</p>
+                </div>
+              </div> 
+           </div>
+       </div>
+</section>
+
+<section style="background: whites; padding:50px,0px, 50px;" id="services">
+                  
+    <div class="content">
+      
+     <h1 style="margin-top: 40px; text-align: center; color: teal; font-weight: bold;" class="underline">Services Offered</h1>
+
+     <div class="card-container">
+      
+      <div class="newcard">
+        <div class="newimage-container">
+        <img class="newcardimg" src={% static 'images/personaltraining.webp' %} alt="gojo">
+      </div>
+        <div class="description">
+        <h2>Personal Training </h2>
+        <p>Our personal training program is designed to provide you with the ultimate fitness experience, tailored specifically to your goals and needs. With our team of highly qualified and experienced personal trainers, you'll receive the dedicated attention and support necessary to reach new heights in your fitness journey..</p>
+        </div>
+      </div>
+
+      
+     
+      <div class="newcard">
+        <div class="newimage-container">
+        <img  class="newcardimg" src={% static 'images/strength.jpeg' %} alt="gojo">
+        </div>
+        <div class="description">
+        <h2>Strength Training </h2>
+        <p> Our strength training program is designed to help you unleash your full potential and build a strong, powerful physique. From free weights to resistance machines, our well-equipped facility provides everything you need to challenge your muscles and push beyond your limits.</p>
+        </div>
+      </div>
+     
+
+     <div class="newcard">
+      <div class="newimage-container">
+      <img class="newcardimg" src={% static 'images/cardio.jpeg' %} alt="gojo">
+      </div>
+      <div class="description">
+      <h2>Cardiovascular Conditioning </h2>
+      <p> Our cardiovascular conditioning program is designed to take your fitness to new heights by enhancing your cardiovascular endurance, boosting stamina, and torching calories. With a range of state-of-the-art equipment at your disposal, including treadmills, stationary bikes, rowing machines, and ellipticals, you'll have the tools to push your limits and achieve optimal results.</p>
+      </div>
+    </div>
+        <div class="newcard">
+          <div class="newimage-container">
+          <img class="newcardimg" src={% static 'images/weightloss.webp' %} alt="gojo">
+          </div>
+          <div class="description">
+          <h2>Weight Loss Programs </h2>
+          <p> Our weight loss program offers a holistic approach to help you shed unwanted pounds and embrace a healthier lifestyle. Combining effective workouts with personalized nutrition guidance, our program is designed to optimize your weight loss journey and ensure long-term success</p>
+          </div>
+        </div> 
+
+        <div class="newcard">
+          <img class="newcardimg" src={% static 'images/sport.jpeg' %} alt="gojo">
+          <div class="description">
+          <h2>Sports-Specific Training </h2>
+          <p> Our sports-specific training programs are designed to elevate your performance in your chosen sport, whether it's basketball, soccer, tennis, golf, or any other athletic pursuit. Through a combination of sport-specific exercises, technical training, and personalized coaching, our training sessions will help you reach peak performance and surpass your goals.</p>
+          </div>
+        </div> 
+
+        <div class="newcard">
+          <img class="newcardimg" src={% static 'images/nutrition.webp' %} alt="gojo">
+          <div class="description">
+          <h2>Nutritional Guidance </h2>
+          <p>Our nutritional guidance section offers a comprehensive approach to help you achieve your fitness goals by fueling your body with the right nutrition. Whether you want to lose weight, build muscle, improve athletic performance, or enhance overall well-being, our guidance will empower you to make informed choices and establish sustainable habits. </p>
+          </div>
+        </div> 
+   
+      </div>
+      
+    
+  
+    </div>
+  </div>
+</section>
+  <section style="background: white; padding:50px,0px, 50px;" id="facilities">
+
+    <div class="content">
+      
+      <h1 style="margin-top: 40px; text-align: center; color: teal; font-weight: bold; " class="underline">FACILITIES & EQUIPMENT</h1>
+   
+      <div class="imgbody">
+      <div class="slider">
+        <a href="#slide-1">1</a>
+        <a href="#slide-2">2</a>
+        <a href="#slide-3">3</a>
+        <a href="#slide-4">4</a>
+        <a href="#slide-5">5</a>
+
+      <div class="slides">
+      <div id="slide-1">s
+        <img src={% static 'images/image1.jpeg' %} alt="gojo">
+      </div>
+      <div id="slide-2">
+        <img src={% static 'images/gym3.jpg' %} alt="gojo">
+      </div>
+      <div id="slide-3" >
+        <img src={% static 'images/gym5.jpg' %}>
+      </div>
+      <div id="slide-4">
+        <img src={% static 'images/gym2.jpg' %}>
+      </div>
+      <div id="slide-5">
+        <img src="{% static 'images/5.jpeg' %}">
+      </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+  
+  
+{% endblock %}
+
